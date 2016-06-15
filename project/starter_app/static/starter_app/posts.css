@@ -1,0 +1,172 @@
+body {
+	margin: auto;
+	background: url("images/background4.jpg") repeat top;
+}
+/* home.html style*/
+.menubar {
+	position: fixed;
+	scroll-behavior: smooth;
+	overflow: scroll;
+	width: 20%;
+	height: 100%;
+	background-color: #111;
+}
+
+.posts-btn {
+	color: blue;
+	width: 99.3%;
+	text-align: center;
+	background-color: darkorange;
+	padding: 10px 0 10px 0;
+	font-size: 22px;
+	border: solid 1px;
+	margin: 0 0 0 0;
+}
+
+.posts-btn:hover {
+	background-color: rgb(255, 102, 0);
+}
+
+.posts-content {
+	list-style-type: none;
+	margin: 20px 0 0 -20px;
+	position: relative;
+}
+.posts-content a {
+	color: rgb(224,0,102);
+	font: italic bold 20px Georgia serif;
+	display: block;
+}
+
+.posts-content a:hover {
+	background-color: rgba(255, 152, 0, 1);
+}
+
+a:link {
+	text-decoration: none;
+}
+
+.active {
+    font-weight: bold;
+    border: solid 1px white;
+}
+
+.create-new-post {
+	position: fixed;
+	bottom: -22px;
+	color: blue;
+	width: 19.85%;
+	text-align: center;
+	background-color: darkorange;
+	padding: 10px 0 10px 0;
+	font-size: 22px;
+	border: solid 1px;
+
+}
+
+.create-new-post:hover {
+	background-color: rgb(255, 102, 0);
+}
+
+.list-of-posts {
+	padding: 40px;
+	width: 400px;
+	margin: 0 30%;
+}
+
+li {
+	list-style-type: none;
+}
+
+.title {
+	padding-top: 40px;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 20px;
+	color: rgb(224,0,102)
+}
+
+.date-of-post {
+	list-style-type: none;
+	font-size: 15px;
+	text-align: left;
+	color: rgb(0,0,255);
+	font: italic bold 16px Georgia serif;
+}
+
+.post-content-part {
+	font-family: Arial;
+}
+
+.list-of-posts li a {
+	text-decoration: none;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 20px;
+	color: rgb(224,0,102)
+}
+
+.list-of-posts .read-more {
+	text-decoration: none;
+	font-style: italic;
+	font-size: 14px;
+	color: darkorange;
+	margin: 0 60%;
+}
+
+#create-new-post-title {
+	margin: 0 0 0 40%; 
+	color: blue;
+	padding-top: 20px;
+	font-size: 22px;
+}
+
+.create-form-template {
+	margin: 0 0 0 40%;
+}
+
+.failure {
+	color: red;
+	font-size: 24px;
+}
+
+.success {
+	padding-top: 20%;
+	margin: 0 0 0 40%;
+}
+
+.list-of-posts .update-post {
+	text-decoration: none;
+	font-style: italic;
+	font-size: 14px;
+	color: red;
+	margin: 0 60%;
+}
+
+/* post_detail.html style*/
+ul {
+	margin-top: 0;
+}
+
+.title-detail {
+	padding-top: 40px;
+	margin: 0 30%;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 20px;
+	color: rgb(224,0,102)
+}
+.published {
+	margin: 0 30% ;
+	text-align: left;
+	color: rgb(0,0,255);
+	padding: 5px 0 5px 0;
+	font: italic bold 16px Georgia serif;
+}
+.content {
+	margin: 0 30%;
+	width: 400px;
+	text-align: justify;
+	font-family: Arial;
+	font-size: 14px;
+}

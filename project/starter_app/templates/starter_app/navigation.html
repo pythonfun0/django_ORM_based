@@ -1,0 +1,18 @@
+{% block menubar %}
+
+<div class="menubar">
+	<p class="posts-btn"><a href="{% url 'starter_app:posts' %}">Posts</a></p>
+	<ul>
+		{% for post in posts %}
+			<li class="posts-content">
+				<a {% if post == active %}class="active"{% endif %}
+					href="{% url 'starter_app:post_detail' post.pk %}"> - {{ post.title }}
+				</a>
+			</li>
+		{% endfor %} 
+	</ul>
+	<p class="create-new-post">
+		<a href="{% url 'starter_app:create_new_post' %}">Create new post</a>
+	</p>
+</div>
+{% endblock %}

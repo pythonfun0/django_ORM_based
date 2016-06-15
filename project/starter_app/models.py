@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
-
 from django.db import models
 
 
-class Message(models.Model):
-    order = models.IntegerField()
-    text = models.CharField(max_length=200)
+class Post(models.Model):
+	title = models.CharField(max_length=50)
+	slug = models.SlugField()
+	content = models.TextField()
+	date_of_creation = models.DateTimeField()
 
-    def __unicode__(self):
-        return self.text
+	def __str__(self):
+		return self.title
 
-    class Meta:
-        ordering = ['order']
+	class Meta:
+		ordering = ['-date_of_creation']

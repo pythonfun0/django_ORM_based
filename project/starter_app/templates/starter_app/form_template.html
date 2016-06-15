@@ -1,0 +1,5 @@
+<form class="create-form-template" action="{% url 'starter_app:edit-post' post.pk %}" method="post">
+	<p class="failure">{{ post.errors }}</p>
+	<p>Title: {{ form.title }}</p>
+	<p>Content: {{ form.content }}</p>
+</form>

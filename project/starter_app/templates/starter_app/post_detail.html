@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load menubar %}
+
+{% block menu_block %}
+	{% menubar post %}
+{% endblock %}
+
+{% block content %}
+	<p class="title-detail">{{ post.title }}</p>
+	<p class="published">Created: {{ post.date_of_creation|date:"Y-m-d" }}</p>
+	<p class="content">{{ post.content }}</p>
+{% endblock %}

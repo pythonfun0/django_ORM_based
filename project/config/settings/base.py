@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from os.path import abspath, dirname, join, normpath
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
@@ -22,7 +21,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles'
 )
 
-PROJECT_APPS = ('starter_app',)
+PROJECT_APPS = (
+    'starter_app',
+)
 
 INSTALLED_APPS += PROJECT_APPS
 
@@ -44,7 +45,7 @@ MEDIA_URL = '/media/'
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Budapest'
 
 USE_I18N = True
 USE_L10N = True

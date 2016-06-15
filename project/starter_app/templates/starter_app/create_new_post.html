@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load menubar %}
+
+{% block menu_block %}
+	{% menubar %}
+{% endblock %}
+
+
+{% block content %}
+	{% if created %}
+		<h1 class="success">{{ message }}</h1>
+	{% else %}
+		<h3 id="create-new-post-title">Create a new post</h3>
+		<form class="create-form-template" action="." method="post">
+			<p class="failure">{{ message }}</p>
+			<p>Title: {{ form.title }}</p>
+			<p>Content: {{ form.content }}</p>
+			{% csrf_token %}
+			<input type="submit" value="Upload">
+		</form>
+	{% endif %}
+{% endblock %}

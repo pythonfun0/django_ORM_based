@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load menubar %}
+
+{% block menu_block %}
+	{% menubar %}
+{% endblock %}
+
+
+{% block content %}
+<ul class="list-of-posts">
+	{% for post in posts %}
+		<li>
+			<a class="title" href="{% url 'starter_app:post_detail' post.pk %}"> {{ post.title }}</a><br/>
+			<span class="date-of-post">Created: {{ post.date_of_creation|date:"Y-m-d" }}</span><br/>
+			<span class="post-content-part">{{ post.content|truncatewords:15 }}</span><br/>
+			<a class="read-more" href="{% url 'starter_app:post_detail' post.pk %}">Read more</a><br/>
+			<a class="update-post" href="{% url 'starter_app:edit-post' post.pk %}">Edit post</a><br/>
+		</li>
+	{% endfor %}
+</ul>
+{% endblock %}
